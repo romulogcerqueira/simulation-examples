@@ -1,0 +1,10 @@
+<package>
+  <description brief="Example scripts for imaging sonar simulation">
+
+  </description>
+  <author>Rômulo Cerqueira/romulogcerqueira@gmail.com</author>
+  <depend package="simulation/orogen/imaging_sonar_simulation" />
+  <depend package="gui/vizkit3d_ocean" />
+    <!-- osg dependencies -->
+  <rosdep name="osg" />
+</package>
