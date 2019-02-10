@@ -107,10 +107,10 @@
           <item>
            <widget class="QDoubleSpinBox" name="x_target_editor">
             <property name="minimum">
-             <double>-500.000000000000000</double>
+             <double>-2000.000000000000000</double>
             </property>
             <property name="maximum">
-             <double>500.000000000000000</double>
+             <double>2000.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -227,10 +227,10 @@
           <item>
            <widget class="QDoubleSpinBox" name="y_target_editor">
             <property name="minimum">
-             <double>-500.000000000000000</double>
+             <double>-2000.000000000000000</double>
             </property>
             <property name="maximum">
-             <double>500.000000000000000</double>
+             <double>2000.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -347,10 +347,10 @@
           <item>
            <widget class="QDoubleSpinBox" name="z_target_editor">
             <property name="minimum">
-             <double>-500.000000000000000</double>
+             <double>-2000.000000000000000</double>
             </property>
             <property name="maximum">
-             <double>500.000000000000000</double>
+             <double>2000.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -866,9 +866,6 @@ subcontrol-position: top left;
     </widget>
    </item>
   </layout>
-  <zorder>goto_zyaw_frame</zorder>
-  <zorder>manual_control</zorder>
-  <zorder>goto_xy_frame</zorder>
  </widget>
  <resources/>
  <connections/>
