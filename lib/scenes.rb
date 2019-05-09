@@ -36,7 +36,7 @@ module UnderwaterScenes
                         'position' => Eigen::Vector3.new(-14, -24.40, -5),
                         'orientation' => Eigen::Quaternion.from_euler(Eigen::Vector3.new(0, 0, 0), 2, 1, 0)},
 
-    # MSIS: range = 60m, gain = 65%
+    # MSIS: range = 7m, gain = 50%
     'mega_structure'=> {'world' => "#{ENV['AUTOPROJ_CURRENT_ROOT']}/simulation/uwmodels/scenes/mega_structure/mega_structure.world",
                         'position' => Eigen::Vector3.new(0, 0, 0),
                         'orientation' => Eigen::Quaternion.from_euler(Eigen::Vector3.new(0, 0, 0), 2, 1, 0)},

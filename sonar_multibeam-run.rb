@@ -11,7 +11,7 @@ include Orocos
 Rock::Gazebo.initialize
 _, argv = Rock::Gazebo.resolve_worldfiles_and_models_arguments(ARGV)
 
-@world = UnderwaterScenes::SCENES['ssiv_bahia_eval']
+@world = UnderwaterScenes::SCENES['maria_layout']
 @scene = @world['world']
 
 Orocos.run 'imaging_sonar_simulation::MultibeamSonarTask' => 'sonar_multibeam' do

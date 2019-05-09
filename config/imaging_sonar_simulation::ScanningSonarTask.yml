@@ -7,21 +7,21 @@ beam_width:
   rad: 3.deg
 # Number of Bins
 # bin_count: 1500
-bin_count: 294
+bin_count: 1000
 # Enable/disable ping pong scanning mode
 continuous: true
 # Gain of the sonar (0.0 - 1.0)
-gain: 0.65
+gain: 0.35
 # Left limit angle
 left_limit:
   rad: -180.deg
 # Step angle size
 motor_step:
-  rad: 2.47.deg
+  # rad: 2.47.deg
   # rad: 1.8.deg
-  # rad: 0.225.deg
+  rad: 0.225.deg
 # Range of the sonar in meters (1.0 - 150.0)
-range: 60.0
+range: 7.0
 # Right limit angle
 right_limit:
   rad: 179.99.deg
