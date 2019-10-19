@@ -1,6 +1,6 @@
 require 'rock/bundles'
 require 'orocos'
-require_relative "./lib/common"
+require_relative "./lib/common.rb"
 require_relative "./lib/scenes.rb"
 require_relative "./lib/pose_control.rb"
 require_relative './lib/rock_gazebo'
@@ -11,7 +11,7 @@ include Orocos
 Rock::Gazebo.initialize
 _, argv = Rock::Gazebo.resolve_worldfiles_and_models_arguments(ARGV)
 
-@world = UnderwaterScenes::SCENES['maria_layout']
+@world = UnderwaterScenes::SCENES['ferry']
 @scene = @world['world']
 
 Orocos.run 'imaging_sonar_simulation::MultibeamSonarTask' => 'sonar_multibeam' do
@@ -22,7 +22,8 @@ Orocos.run 'imaging_sonar_simulation::MultibeamSonarTask' => 'sonar_multibeam' d
     @sonar_pose.position = @world['position']
     @sonar_pose.orientation = @world['orientation']
 
-    Orocos.log_all
+    # Orocos.log_all
+
     # Start the orocos task
     task = TaskContext.get 'sonar_multibeam'
     timeout = 5
@@ -31,6 +32,4 @@ Orocos.run 'imaging_sonar_simulation::MultibeamSonarTask' => 'sonar_multibeam' d
     # Start the Rock widgets
     buffer = 1
     setup_widgets(task, buffer)
-
-
 end
