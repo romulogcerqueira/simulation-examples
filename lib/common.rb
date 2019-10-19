@@ -38,6 +38,10 @@ def setup_widgets(task, buffer)
     sonar_gui.setMaxRange(150)
     sonar_gui.setSonarPalette(1)
 
+    if task.has_property?('motor_step') then
+        sonar_gui.setMotorStep(task.motor_step)
+    end
+
     sonar_gui.connect(SIGNAL('gainChanged(int)')) do |value|
         task.property("gain").write value / 100.0
     end
