@@ -11,7 +11,7 @@ include Orocos
 Rock::Gazebo.initialize
 _, argv = Rock::Gazebo.resolve_worldfiles_and_models_arguments(ARGV)
 
-@world = UnderwaterScenes::SCENES['mega_structure']
+@world = UnderwaterScenes::SCENES['tank']
 @scene = @world['world']
 
 Orocos.run 'imaging_sonar_simulation::ScanningSonarTask' => 'sonar_scanning' do
@@ -22,7 +22,7 @@ Orocos.run 'imaging_sonar_simulation::ScanningSonarTask' => 'sonar_scanning' do
     @sonar_pose.position = @world['position']
     @sonar_pose.orientation = @world['orientation']
 
-    Orocos.log_all
+    # Orocos.log_all
 
     # Start the orocos task
     task = TaskContext.get 'sonar_scanning'
@@ -30,6 +30,6 @@ Orocos.run 'imaging_sonar_simulation::ScanningSonarTask' => 'sonar_scanning' do
     setup_task(task, timeout)
 
     # Start the Rock widgets
-    buffer = 300
+    buffer = 5
     setup_widgets(task, buffer)
 end
