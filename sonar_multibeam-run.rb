@@ -26,7 +26,7 @@ Orocos.run 'imaging_sonar_simulation::MultibeamSonarTask' => 'sonar_multibeam' d
 
     # Start the orocos task
     task = TaskContext.get 'sonar_multibeam'
-    timeout = 5
+    timeout = 100
     setup_task(task, timeout)
 
     # Start the Rock widgets
