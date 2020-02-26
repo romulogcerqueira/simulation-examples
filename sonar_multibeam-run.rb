@@ -11,7 +11,7 @@ include Orocos
 Rock::Gazebo.initialize
 _, argv = Rock::Gazebo.resolve_worldfiles_and_models_arguments(ARGV)
 
-@world = UnderwaterScenes::SCENES['ssiv_bahia']
+@world = UnderwaterScenes::SCENES['maria_layout']
 @scene = @world['world']
 
 Orocos.run 'imaging_sonar_simulation::MultibeamSonarTask' => 'sonar_multibeam' do
@@ -22,10 +22,10 @@ Orocos.run 'imaging_sonar_simulation::MultibeamSonarTask' => 'sonar_multibeam' d
     @sonar_pose.position = @world['position']
     @sonar_pose.orientation = @world['orientation']
 
-    # Orocos.log_all
+    Orocos.log_all
     # Start the orocos task
     task = TaskContext.get 'sonar_multibeam'
-    timeout = 100
+    timeout = 5
     setup_task(task, timeout)
 
     # Start the Rock widgets
