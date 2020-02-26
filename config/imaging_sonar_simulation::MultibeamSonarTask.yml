@@ -1,25 +1,4 @@
 --- name:default
-# # Number of Beams
-# beam_count: 256
-# # Opening of the beam along the device's Z direction
-# beam_height:
-#   rad: 20.deg
-# # Opening of the beam orthogonal to the device's Z direction
-# beam_width:
-#   rad: 120.deg
-# # Number of Bins
-# bin_count: 600
-# # Gain of the sonar (0.0 - 1.0)
-# gain: 0.55
-# # Set the virtual camera height
-# height: 600
-# # height: 1500
-# # Range of the sonar in meters (1.0 - 150.0)
-range: 25.0
-# # Write shader image
-# write_shader_image: false
-
-# --- name:similarity
 # Number of Beams
 beam_count: 256
 # Opening of the beam along the device's Z direction
@@ -29,16 +8,12 @@ beam_height:
 beam_width:
   rad: 120.deg
 # Number of Bins
-bin_count: 844
+bin_count: 750
 # Gain of the sonar (0.0 - 1.0)
-gain: 0.55
+gain: 0.35
 # Set the virtual camera height
 height: 600
-# height: 1500
 # Range of the sonar in meters (1.0 - 150.0)
-# range: 50.0
-# range: 16.0
+range: 18.0
 # Write shader image
-# write_shader_image: true
-attenuation_properties:
-  frequency: 350.0
+write_shader_image: false
