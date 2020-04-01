@@ -10,7 +10,7 @@ bin_count: 1000
 # Enable/disable ping pong scanning mode
 continuous: true
 # Gain of the sonar (0.0 - 1.0)
-gain: 0.7
+gain: 0.15
 # Left limit angle
 left_limit:
   rad: -180.deg
@@ -18,7 +18,7 @@ left_limit:
 motor_step:
   rad: 2.43.deg
 # Range of the sonar in meters (1.0 - 150.0)
-range: 7
+range: 28
 # Right limit angle
 right_limit:
   rad: 179.999.deg
